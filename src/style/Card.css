@@ -1,0 +1,35 @@
+/* Custom styling for slick carousel */
+.slick-prev,
+.slick-next {
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    position: absolute;  /* Add this for positioning */
+    top: 50%;  /* Vertically center */
+    transform: translateY(-50%);  /* Adjust for perfect centering */
+}
+
+.slick-prev {
+    left: 10px;  /* You can adjust this value */
+}
+
+.slick-next {
+    right: 10px;  /* You can adjust this value */
+}
+
+.slick-prev::before,
+.slick-next::before {
+    font-size: 30px;
+    color: #f70776 !important; /* Custom arrow color */
+}
+
+/* Change dot color and size */
+.slick-dots li button:before {
+    font-size: 30px !important; /* Increase dot size */
+    color: #f70776 !important; /* Change dot color */
+}
+
+/* Active dot styling */
+.slick-dots li.slick-active button:before {
+    color: #f70776 !important;
+}

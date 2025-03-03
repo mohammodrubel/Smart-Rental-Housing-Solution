@@ -1,0 +1,6 @@
+.banner {
+    background: url(../img/building.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
