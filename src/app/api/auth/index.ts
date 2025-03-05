@@ -1,22 +1,22 @@
 "use server"
 
 import { cookies } from "next/headers"
-export const RegisterUser = async (userData: {name:string,email:string,password:string}) => {
-    try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/user/create-user`, {
-            method: 'POST',
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json",
-            },
-            body: JSON.stringify(userData)
-        })
-        const result = await res.json()
-        return result
-    }
-    catch (error) {
-        return error
-    }
+export const RegisterUser = async (userData: { name: string, email: string, password: string }) => {
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/user/create-user`, {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+      body: JSON.stringify(userData)
+    })
+    const result = await res.json()
+    return result
+  }
+  catch (error) {
+    return error
+  }
 }
 
 export const LoginUser = async (loginData: { email: string; password: string }) => {
@@ -49,12 +49,32 @@ export const LoginUser = async (loginData: { email: string; password: string }) 
 
     return result;
   } catch (error) {
-    console.error(error);
-    return { error: "Something went wrong." };
+    return error
   }
 };
+
+
+export const getAllUser = async () => {
+  try {
+    const response = await fetch(`http://localhost:9000/api/user`, {
+      cache: "no-store",
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch users: ${response.statusText}`);
+    }
+
+    const data = await response.json(); // Convert response to JSON
+    return data?.data
+  } catch (error) {
+    console.error("Error fetching users:", error);
+    return []; // Return empty array instead of raw error
+  }
+};
+
+
 export const logout = async () => {
-    (await cookies()).delete("accessToken")
+  (await cookies()).delete("accessToken")
 }
 
 

@@ -2,16 +2,25 @@
 import Link from 'next/link';
 import { useState, FormEvent } from 'react';
 import { LoginUser } from '../api/auth';
+import { toast } from 'sonner';
+import { useRouter } from 'next/navigation';
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
+  const router = useRouter()
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     console.log(formData);
 
     const response = await LoginUser(formData);
-    console.log(response);
+    if(response?.success){
+      toast.success(response?.message)
+      router.push('/')
+    }
+    if(response.success === false){
+      toast.error(response?.message)
+    }
   };
 
 

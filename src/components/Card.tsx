@@ -80,7 +80,7 @@ const Card = () => {
                     <div className="mt-4">
                         <div className="flex justify-between items-center text-gray-800">
                             <p className="text-lg font-semibold flex items-center">
-                                <i className="fas fa-dollar-sign text-green-500 mr-2"></i> ${item.rent_amount} / month
+                                <i className="fas fa-dollar-sign text-green-500 mr-2"></i> {item.rent_amount} / month
                             </p>
                             <p className="text-gray-600 font-bold flex items-center">
                                 <i className="fas fa-bed text-[#f70776] mr-2"></i> {item.number_of_bedrooms} Bedrooms

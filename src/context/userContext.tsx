@@ -4,7 +4,7 @@ import { getCurrentValue } from "@/utils";
 
 import { createContext, Dispatch, SetStateAction, useContext, useEffect, useState } from "react"
 
-type IuserProviderValueTyps = {
+export type IuserProviderValueTyps = {
     user: IUser | null | undefined,
     isLoading: boolean,
     setUser: (user: IUser | null) => void,
