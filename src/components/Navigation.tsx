@@ -9,7 +9,7 @@ function Navigation() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <div className="bg-[#f70776] z-50 sticky top-0">
+        <div className="bg-[#07588a] z-50 sticky top-0">
             <div className="container mx-auto px-4">
                 <nav className="flex justify-between items-center py-4">
                     {/* Logo */}
@@ -41,7 +41,7 @@ function Navigation() {
 
                     {/* Mobile Navigation Links */}
                     <div
-                        className={`absolute top-16 left-0 w-full bg-[#f70776] md:hidden transition-all duration-500 ease-in-out
+                        className={`absolute top-16 left-0 w-full bg-[#07588a] md:hidden transition-all duration-500 ease-in-out
                         ${menuOpen ? "max-h-screen opacity-100 translate-y-0" : "max-h-0 opacity-0 translate-y-5 overflow-hidden"}`}
                     >
                         <ul className="flex flex-col gap-5 p-5">

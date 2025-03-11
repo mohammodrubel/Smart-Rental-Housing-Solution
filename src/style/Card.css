@@ -20,16 +20,16 @@
 .slick-prev::before,
 .slick-next::before {
     font-size: 30px;
-    color: #f70776 !important; /* Custom arrow color */
+    color: #07588a !important; /* Custom arrow color */
 }
 
 /* Change dot color and size */
 .slick-dots li button:before {
     font-size: 30px !important; /* Increase dot size */
-    color: #f70776 !important; /* Change dot color */
+    color: #07588a !important; /* Change dot color */
 }
 
 /* Active dot styling */
 .slick-dots li.slick-active button:before {
-    color: #f70776 !important;
+    color: #07588a !important;
 }

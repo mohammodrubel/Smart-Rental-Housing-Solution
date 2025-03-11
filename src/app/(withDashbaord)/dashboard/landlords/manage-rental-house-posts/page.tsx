@@ -124,7 +124,7 @@ export default function RentalForm() {
 
 
         {/* Submit Button */}
-        <button type="submit" className="w-full bg-[#f70776] text-white py-2 rounded hover:bg-[#d6065a] transition">
+        <button type="submit" className="w-full bg-[#07588a] text-white py-2 rounded hover:bg-[#d6065a] transition">
           Submit
         </button>
       </form>

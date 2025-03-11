@@ -11,10 +11,10 @@ function Banner() {
                     <h2 className="mb-5 text-4xl bg-[#000000b7] px-10 py-4 inline-block text-white">
                         Let’s find the
                     </h2>
-                    <h1 className="text-4xl md:text-6xl lg:text-8xl text-[#f70776] font-extrabold mt-5">
+                    <h1 className="text-4xl md:text-6xl lg:text-8xl text-[#07588a] font-extrabold mt-5">
                         <span className="text-white">Find a Home </span>You'll Love
                     </h1>
-                    <button className="mt-5 px-6 py-3 cursor-pointer bg-[#f70776] text-white rounded-md hover:bg-[#f70776] focus:outline-none focus:ring-2 focus:ring-[#f70777ef]">
+                    <button className="mt-5 px-6 py-3 cursor-pointer bg-[#07588a] text-white rounded-md hover:bg-[#07588a] focus:outline-none focus:ring-2 focus:ring-[#07588a]">
                         Explore Now
                     </button>
                 </div>

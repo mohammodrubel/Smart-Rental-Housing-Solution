@@ -1,9 +1,9 @@
 "use client"
 import Link from 'next/link';
-import { useState, FormEvent } from 'react';
-import { LoginUser } from '../api/auth';
-import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
+import { FormEvent, useState } from 'react';
+import { toast } from 'sonner';
+import { LoginUser } from '../api/auth';
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -14,11 +14,11 @@ const LoginForm = () => {
     console.log(formData);
 
     const response = await LoginUser(formData);
-    if(response?.success){
+    if (response?.success) {
       toast.success(response?.message)
       router.push('/')
     }
-    if(response.success === false){
+    if (response.success === false) {
       toast.error(response?.message)
     }
   };
@@ -39,7 +39,7 @@ const LoginForm = () => {
             type="email"
             id="email"
             value={formData.email}
-        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             required
             className="w-full p-3 mt-1 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
           />
@@ -59,7 +59,7 @@ const LoginForm = () => {
         </div>
         <button
           type="submit"
-          className="w-full py-2 bg-[#f70776] text-white rounded-md hover:bg-[#f70776] focus:outline-none focus:ring-2 focus:ring-[#f70777ef]"
+          className="w-full py-2 bg-[#07588a] text-white rounded-md hover:bg-[#07588a] focus:outline-none focus:ring-2 focus:ring-[#07588a]"
         >
           Log in
         </button>
@@ -70,3 +70,5 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+
+// #

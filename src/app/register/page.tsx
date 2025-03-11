@@ -1,9 +1,8 @@
 "use client";
 import Link from 'next/link';
 import { FormEvent, useState } from 'react';
-import { RegisterUser } from '../api/auth';
-import { error } from 'console';
 import { toast } from 'sonner';
+import { RegisterUser } from '../api/auth';
 
 const RegisterForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -16,22 +15,22 @@ const RegisterForm: React.FC = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-  
+
     try {
       if (formData.password !== formData.repassword) {
         alert("Passwords do not match!");
         return;
       }
-  
+
       const sendInfo = {
         name: formData.name,
         email: formData.email,
         password: formData.password,
         role: formData.role,
       };
-  
+
       const response = await RegisterUser(sendInfo);
-      
+
       if (response?.success) {
         toast.success(response.message || "Registration successful!");
       } else {
@@ -139,7 +138,7 @@ const RegisterForm: React.FC = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full py-2 bg-[#f70776] text-white rounded-md hover:bg-[#f70776] focus:outline-none focus:ring-2 focus:ring-[#f70777ef]"
+          className="w-full py-2 bg-[#07588a] text-white rounded-md hover:bg-[#07588a] focus:outline-none focus:ring-2 focus:ring-[#07588a]"
         >
           Register
         </button>

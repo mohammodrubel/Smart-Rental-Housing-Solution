@@ -42,7 +42,7 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
       <div
-        className={`fixed inset-y-0 left-0 bg-[#f70776] text-white w-64 p-6 transform ${
+        className={`fixed inset-y-0 left-0 bg-[#07588a] text-white w-64 p-6 transform ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-64"
         } transition-transform md:relative md:translate-x-0 md:flex md:flex-col`}
       >
@@ -59,7 +59,7 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
         {/* Sidebar Menu */}
         <nav className="space-y-4">
           {menuItems.map((item, index) => (
-            <Link key={index} href={item.path} className="block p-2 hover:bg-[#d6065a] rounded">
+            <Link key={index} href={item.path} className="block p-2 hover:bg-[#07708a] rounded">
               {item.text}
             </Link>
           ))}
@@ -69,7 +69,7 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
       {/* Main Content */}
       <div className="flex-1 flex flex-col">
         {/* Navbar */}
-        <div className="bg-[#f70776] p-4 text-white flex items-center justify-between md:px-6">
+        <div className="bg-[#07588a] p-4 text-white flex items-center justify-between md:px-6">
           <button className="md:hidden" onClick={toggleSidebar}>
             <i className="fas fa-bars text-xl"></i>
           </button>
