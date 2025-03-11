@@ -60,3 +60,19 @@ export const getAllLandlordLocation = async () => {
     }
 };
 
+export const getSingleLandlordLocation = async (id:string) => {
+    try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/landlords/listings/${id}`, {
+            cache: 'no-store',
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        console.log(response)
+        return await response.json();
+    } catch (error) {
+        console.error("Error fetching landlords:", error);
+        return { success: false, message: "Failed to fetch landlords" };
+    }
+};

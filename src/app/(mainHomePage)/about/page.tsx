@@ -177,7 +177,7 @@ export default function AboutPage() {
             <div className="bg-gray-50 p-8 rounded-lg">
               <div className="text-4xl font-bold text-gray-300 mb-4">❝</div>
               <p className="text-gray-600 mb-6">
-                Really great Theme. We can't even begin to describe how we've been loving working with Houzez.
+                Really great Theme. We cant even begin to describe how weve been loving working with Houzez.
               </p>
               <div className="flex items-center">
                 <div className="mr-4">
@@ -190,7 +190,7 @@ export default function AboutPage() {
             <div className="bg-gray-50 p-8 rounded-lg">
               <div className="text-4xl font-bold text-gray-300 mb-4">❝</div>
               <p className="text-gray-600 mb-6">
-                Great work on your Houzez. I like it more and more each day because it makes my life easier and it's
+                Great work on your Houzez. I like it more and more each day because it makes my life easier and its
                 profitable.
               </p>
               <div className="flex items-center">

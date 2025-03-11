@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import "../style/Card.css";
 import { LandData } from "@/types";
+import Link from "next/link";
 
 const settings = {
     dots: false,
@@ -62,9 +63,11 @@ const Card = ({ cardItem }: { cardItem: LandData }) => {
 
                 <p className="text-sm text-gray-500 mt-2 text-left">{cardItem?.details_description}</p>
                 <div className="text-left">
+                    <Link href={`/rental-housing/${cardItem?._id}`}>
                     <button className="mt-5 text-left px-6 py-1 cursor-pointer bg-[#07588a] text-white rounded-md hover:bg-[#07588a] focus:outline-none focus:ring-2 focus:ring-[#07588a]">
                         Explore Now
                     </button>
+                    </Link>
                 </div>
             </div>
             
