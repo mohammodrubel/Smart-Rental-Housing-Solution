@@ -9,7 +9,7 @@ function Navigation() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <div className="bg-[#07588a] z-50 sticky top-0">
+        <div className="bg-[#07588a] z-[1000] sticky top-0">
             <div className="container mx-auto px-4">
                 <nav className="flex justify-between items-center py-4">
                     {/* Logo */}
